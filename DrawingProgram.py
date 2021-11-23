@@ -88,6 +88,11 @@ class DrawingProgram:
         return self.collection_of_shapes[index]
 
     def set_shape(self, index, shape):
+        """
+        set the shape at the specified index
+        :param shape: Shape
+        :param index: index of the list to set the shape.
+        """
         self.collection_of_shapes[index] = shape
 
     def quick_sort(self, list_to_sort):
@@ -112,45 +117,25 @@ class DrawingProgram:
         # else:
         #     return list_to_sort
 
-
         def quick_sort_impl(left, right):
-            if left>=right:
+            if left >= right:
                 return
             pivot = list_to_sort[left]
             j = left
-            i=j+1
+            i = j + 1
             while i <= right:
-                if pivot>list_to_sort[i] :
-                    j+=1
-                    list_to_sort[j] , list_to_sort[i] = list_to_sort[i], list_to_sort[j]
-                i+=1
+                if pivot > list_to_sort[i]:
+                    j += 1
+                    list_to_sort[j], list_to_sort[i] = list_to_sort[i], list_to_sort[j]
+                i += 1
             list_to_sort[left], list_to_sort[j] = list_to_sort[j] , list_to_sort[left]
             mid = j
-
 
             quick_sort_impl(left, mid-1)
             quick_sort_impl(mid+1, right)
 
         quick_sort_impl(0, len(list_to_sort)-1)
         return list_to_sort
-        # left = 0
-        # right = len(self.collection_of_shapes)
-        # if left >= right:
-        #     return
-        # pivot = self.collection_of_shapes[left]
-        # i = left
-        # j = right
-        # while left < right:
-        #     while left < right and self.collection_of_shapes[right] > pivot:
-        #         right -= 1
-        #     self.collection_of_shapes[left] = self.collection_of_shapes[right]
-        #     while left < right and  pivot>=self.collection_of_shapes[left]:
-        #         left += 1
-        #     self.collection_of_shapes[right] = self.collection_of_shapes[left]
-        # self.collection_of_shapes[right] = pivot
-        # self.quick_sort(i, left-1)
-        # self.quick_sort(left+1, j)
-
 
     def __iter__(self):
         """
