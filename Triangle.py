@@ -1,7 +1,12 @@
+import math
+
 from wang_weinberg_shape_assignment.Shape import Shape
 
 
 class Triangle(Shape):
+    """
+    The Triangle class implement the Shape as Triangle.
+    """
     def __init__(self,sideone, sidetwo, sidethree):
         super().__init__("Triangle")
         self.sideone = sideone
@@ -9,12 +14,20 @@ class Triangle(Shape):
         self.sidethree = sidethree
 
     def area(self):
-        p = self.perimeter()
+        """
+        Calculate the area of the triangle.
+        :return: the area of the triangle.
+        """
+        p = self.perimeter()*0.5
         x = p*(p-self.sideone)*(p-self.sidetwo)*(p-self.sidethree)
-        while x <= 0:
+        if x <= 0:
             print("not a triangle!")
-        area = x**2
+        area = math.sqrt(x)
         return area
 
     def perimeter(self):
+        """
+        Calculate the perimeter of the triangle.
+        :return: the perimeter of the triangle.
+        """
         return self.sideone + self.sidetwo + self.sidethree
