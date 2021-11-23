@@ -69,17 +69,8 @@ class ShapeFactory:
         returns it as that number type if ture.
         Raises an exception as returns of error message if false.
         """
-        # for number in args:
-        #     try:
-        #         float(number)
-        #         if float(number) > 0:
-        #             return True
-        #         else:
-        #             return False
-        #     except:
-        #         raise ValueError("data is not a number!")
         for number in args:
-            if type(float(number)) > 0:
-                yield type(float(number))
+            if type(number) > 0:
+                yield type(number)
             else:
                 raise ValueError("not a good number")
