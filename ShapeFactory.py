@@ -1,7 +1,7 @@
-from wang_weinberg_shape_assignment.Circle import Circle
-from wang_weinberg_shape_assignment.Rectangle import Rectangle
-from wang_weinberg_shape_assignment.Square import Square
-from wang_weinberg_shape_assignment.Triangle import Triangle
+from Circle import Circle
+from Rectangle import Rectangle
+from Square import Square
+from Triangle import Triangle
 
 
 class ShapeFactory:
