@@ -1,5 +1,5 @@
-from wang_weinberg_shape_assignment.ShapeFactory import ShapeFactory
-from wang_weinberg_shape_assignment.DrawingProgram import DrawingProgram
+from ShapeFactory import ShapeFactory
+from DrawingProgram import DrawingProgram
 
 ORDERED_LIST = [
     ShapeFactory.create_circle(4),

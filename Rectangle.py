@@ -1,6 +1,6 @@
 import math
 
-from wang_weinberg_shape_assignment.Shape import Shape
+from Shape import Shape
 
 
 class Rectangle(Shape):

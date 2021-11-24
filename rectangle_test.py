@@ -6,7 +6,7 @@ class RectangleTest():
 
     def test_perimter(self):
         triangle = ShapeFactory.create_shape("Triangle", 3, 4, 5)
-        self.assertEqual(triangle.perimeter(), "45")
+        self.assertEqual(triangle.perimeter(), 12)
 
     def test_draw(self):
         triangle = ShapeFactory.create_shape("Triangle", 3, 4, 5)
