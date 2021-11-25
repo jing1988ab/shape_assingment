@@ -1,0 +1,133 @@
+michaelweinberg@Michaels-MacBook-Pro shape_assingment % python drawingprogrammain.py
+Print empty DrawingProgram:
+
+
+Print DrawingProgram after add shapes:
+
+Triangle, area:1.7320508075688772, perimeter:6.0
+Triangle, area:10.825317547305483, perimeter:15.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Square, area:10000.0, perimeter:400.0
+Square, area:100.0, perimeter:40.0
+Square, area:25.0, perimeter:20.0
+Square, area:16.0, perimeter:16.0
+Rectangle, area:30.0, perimeter:22.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:12.0, perimeter:14.0
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+
+Print DrawingProgram after sort shapes:
+
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:30.0, perimeter:22.0
+Square, area:16.0, perimeter:16.0
+Square, area:25.0, perimeter:20.0
+Square, area:100.0, perimeter:40.0
+Square, area:10000.0, perimeter:400.0
+Triangle, area:1.7320508075688772, perimeter:6.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:10.825317547305483, perimeter:15.0
+
+Print DrawingProgram after second add shapes:
+
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:30.0, perimeter:22.0
+Square, area:16.0, perimeter:16.0
+Square, area:25.0, perimeter:20.0
+Square, area:100.0, perimeter:40.0
+Square, area:10000.0, perimeter:400.0
+Triangle, area:1.7320508075688772, perimeter:6.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:10.825317547305483, perimeter:15.0
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:30.0, perimeter:22.0
+Square, area:16.0, perimeter:16.0
+Square, area:25.0, perimeter:20.0
+Square, area:100.0, perimeter:40.0
+Square, area:10000.0, perimeter:400.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:10.825317547305483, perimeter:15.0
+Triangle, area:1.7320508075688772, perimeter:6.0
+
+Print DrawingProgram after replace shapes:
+
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:20.0, perimeter:18.0
+Square, area:10000.0, perimeter:400.0
+Square, area:16.0, perimeter:16.0
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Square, area:100.0, perimeter:40.0
+Square, area:10000.0, perimeter:400.0
+Rectangle, area:12.0, perimeter:14.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:10.825317547305483, perimeter:15.0
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:30.0, perimeter:22.0
+Square, area:16.0, perimeter:16.0
+Square, area:25.0, perimeter:20.0
+Square, area:100.0, perimeter:40.0
+Square, area:10000.0, perimeter:400.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:10.825317547305483, perimeter:15.0
+Triangle, area:1.7320508075688772, perimeter:6.0
+
+Print DrawingProgram after second sort shapes:
+
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:3.141592653589793, perimeter:6.283185307179586
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:50.26548245743669, perimeter:25.132741228718345
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Circle, area:78.53981633974483, perimeter:31.41592653589793
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Circle, area:314.1592653589793, perimeter:62.83185307179586
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:12.0, perimeter:14.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:20.0, perimeter:18.0
+Rectangle, area:30.0, perimeter:22.0
+Square, area:16.0, perimeter:16.0
+Square, area:16.0, perimeter:16.0
+Square, area:25.0, perimeter:20.0
+Square, area:100.0, perimeter:40.0
+Square, area:100.0, perimeter:40.0
+Square, area:10000.0, perimeter:400.0
+Square, area:10000.0, perimeter:400.0
+Square, area:10000.0, perimeter:400.0
+Triangle, area:1.7320508075688772, perimeter:6.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:6.928203230275509, perimeter:12.0
+Triangle, area:10.825317547305483, perimeter:15.0
+Triangle, area:10.825317547305483, perimeter:15.0
+
+michaelweinberg@Michaels-MacBook-Pro shape_assingment %
+
