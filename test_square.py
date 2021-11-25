@@ -15,13 +15,21 @@ class SquareTest():
         self.assertEqual(square.draw(), "Square, area: $area, perimeter: $perimeter")
 
     def test_lt(self):
-        pass
+        square1 = ShapeFactory.create_square(3)
+        square2 = ShapeFactory.create_square(5)
+        self.assertTrue(square1 < square2)
 
     def test_gt(self):
-        pass
+        square1 = ShapeFactory.create_square(3)
+        square2 = ShapeFactory.create_square(4)
+        self.assertTrue(square2 > square1)
 
     def test_eq(self):
-        pass
+        square1 = ShapeFactory.create_square(3)
+        square2 = ShapeFactory.create_square(4)
+        square3 = ShapeFactory.create_square(4)
+        self.assertFalse(square2 == square1)
+        self.assertTrue(square2 == square3)
 
 if __name__ == '__main__':
     unittest.main()
