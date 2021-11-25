@@ -1,15 +1,18 @@
 import unittest
 from DrawingProgram import DrawingProgram
 from ShapeFactory import ShapeFactory
+from Square import Square
 
 class DrawingProgramTest(unittest.TestCase):
 
+	"""the drawing program should initialize successfully"""
 	def test_init(self):
 		try:
 			init = DrawingProgram()
 		except ValueError as value_error:
 			print("Drawing program failed to initialize")
 
+	"""it should add a shape to the its collection"""
 	def test_add_shape(self):
 		add_shape_dp = DrawingProgram()
 		circle = ShapeFactory.create_circle(5)
@@ -21,6 +24,7 @@ class DrawingProgramTest(unittest.TestCase):
 
 		# self.assertRaises(TypeError, add_shape_dp.add_shape("a string that shouldn't be added"))
 
+	"""it should remove a shape from its collection"""
 	def test_remove_shape(self):
 		remove_shape = DrawingProgram()
 		circle = ShapeFactory.create_circle(5)
@@ -30,10 +34,13 @@ class DrawingProgramTest(unittest.TestCase):
 		except RuntimeError as runtimeerror:
 			print("failed to remove shape")
 
+	""""""
 	def test_print_shape(self):
 		print_shape = DrawingProgram()
-		square = ShapeFactory.create_square(5)
-		print_shape.add_shape(square)
+		print_shape.add_shape(ShapeFactory.create_square(5))
+		print_shape.add_shape(ShapeFactory.create_square(6))
+		mySquare = ShapeFactory.create_square(7)
+		print_shape.print_shape(mySquare)
 
 	def test_sort_shapes(self):
 		sort_shapes_dp = DrawingProgram()

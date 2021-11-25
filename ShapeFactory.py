@@ -11,15 +11,16 @@ class ShapeFactory:
     being passed to the classes.
     """
 
-    # @staticmethod
-    # def create_shape(shape_name, shape_data):
-    #     """
-    #     This is a static
-    #     :param shape_name:
-    #     :param shape_data:
-    #     :return:
-    #     """
-    #     pass
+    @staticmethod
+    def create_shape(shape_name, shape_data):
+        """
+        This is a static
+        :param shape_name:
+        :param shape_data:
+        :return:
+        """
+        pass
+
 
     @staticmethod
     def create_circle(radius):
@@ -66,7 +67,7 @@ class ShapeFactory:
         """
         This is a static method that  checks if a passed value can be
         represented as an input number type greater than zero, and
-        returns it as that number type if ture.
+        returns it as that number type if true.
         Raises an exception as returns of error message if false.
         """
         for number in args:
