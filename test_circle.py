@@ -4,6 +4,9 @@ from ShapeFactory import ShapeFactory
 
 class CircleTest(unittest.TestCase):
 
+    """
+    it should calculate the area
+    """
     def test_area(self):
         circle = ShapeFactory.create_circle(5)
         self.assertEqual(circle.area(), 78.53981633974483)

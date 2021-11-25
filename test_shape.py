@@ -37,15 +37,6 @@ class ShapeTest(unittest.TestCase):
 			print("shape failed to initialize")
 		self.assertEqual(init_shape.get_name_of_shape(), "Triangle")
 
-	def test_lt(self):
-		pass
-
-	def test_gt(self):
-		pass
-
-	def test_eq(self):
-		pass
-
 
 if __name__ == '__main__':
     unittest.main()
