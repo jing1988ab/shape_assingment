@@ -52,10 +52,10 @@ class Shape(metaclass=abc.ABCMeta):
         """
         if isinstance(other, Shape):
             if other.get_name_of_shape() == self.get_name_of_shape():
-                if self.area()>other.area():
+                if self.area() > other.area():
                     return True
                 return False
-            elif self.get_name_of_shape()> other.get_name_of_shape():
+            elif self.get_name_of_shape() > other.get_name_of_shape():
                 return True
             return False
         raise Exception("Other is not a shape")
