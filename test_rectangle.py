@@ -24,11 +24,17 @@ class RectangleTest():
         square2 = ShapeFactory.create_square(3, 5)
         self.assertTrue(square1 < square2)
 
+    """
+    it should override the less than operator based on area
+    """
     def test_gt(self):
         square1 = ShapeFactory.create_square(3, 4)
         square2 = ShapeFactory.create_square(4, 5)
         self.assertTrue(square2 > square1)
 
+    """
+    it should override the equality operator based on area
+    """
     def test_eq(self):
         square1 = ShapeFactory.create_square(3, 4)
         square2 = ShapeFactory.create_square(4, 5)

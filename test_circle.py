@@ -11,24 +11,32 @@ class CircleTest(unittest.TestCase):
         circle = ShapeFactory.create_circle(5)
         self.assertEqual(circle.area(), 78.53981633974483)
 
+    """
+    it should calculate the perimeter
+    """
     def test_perimeter(self):
         circle = ShapeFactory.create_circle(5)
         self.assertEqual(circle.perimeter(), 31.41592653589793)
 
-    def test_draw(self):
-        circle = ShapeFactory.create_circle(5)
-        self.assertEqual(circle.__str__(), "Circle, area:78.53981633974483, perimeter:31.41592653589793")
-
+    """
+    it should override the less than operator based on area
+    """
     def test_lt(self):
         circle1 = ShapeFactory.create_circle(3)
         circle2 = ShapeFactory.create_circle(5)
         self.assertTrue(circle1 < circle2)
 
+    """
+    it should override the less than operator based on area
+    """
     def test_gt(self):
         circle1 = ShapeFactory.create_circle(3)
         circle2 = ShapeFactory.create_circle(4)
         self.assertTrue(circle2 > circle1)
 
+    """
+    it should override the equality operator based on area
+    """
     def test_eq(self):
         circle1 = ShapeFactory.create_circle(3)
         circle2 = ShapeFactory.create_circle(4)

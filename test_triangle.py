@@ -18,21 +18,25 @@ class TriangleTest(unittest.TestCase):
         triangle = ShapeFactory.create_triangle(3, 4, 5)
         self.assertEqual(triangle.perimeter(), 12)
 
-
-    def test_draw(self):
-        triangle = ShapeFactory.create_triangle(3, 4, 5)
-        self.assertEqual(triangle.__str__(), "Triangle, area:6.0, perimeter:12.0")
-
+    """
+    it should override the less than operator based on area
+    """
     def test_lt(self):
         triangle1 = ShapeFactory.create_triangle(3, 4, 5)
         triangle2 = ShapeFactory.create_triangle(3, 4, 6)
         self.assertTrue(triangle2 < triangle1)
 
+    """
+    it should override the less than operator based on area
+    """
     def test_gt(self):
         triangle1 = ShapeFactory.create_triangle(3, 4, 5)
         triangle2 = ShapeFactory.create_triangle(3, 4, 6)
         self.assertTrue(triangle1 > triangle2)
 
+    """
+    it should override the equality operator based on area
+    """
     def test_eq(self):
         triangle1 = ShapeFactory.create_triangle(3, 4, 5)
         triangle2 = ShapeFactory.create_triangle(3, 4, 6)
