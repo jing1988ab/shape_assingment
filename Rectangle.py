@@ -17,11 +17,13 @@ class Rectangle(Shape):
         Calculate the area of the rectangle.
         :return: the area of the rectangle.
         """
-        return self.sideone*self.sidetwo*0.5
+        # return self.sideone*self.sidetwo*0.5
+        return self.sideone * self.sidetwo
 
     def perimeter(self):
         """
         Calculate the perimeter of the rectangle.
         :return: the perimeter of the rectangle.
         """
-        return math.sqrt(self.sideone**2+self.sidetwo**2) + self.sideone + self.sidetwo
+        return 2 * (self.sideone + self.sidetwo)
+        # return math.sqrt(self.sideone**2+self.sidetwo**2) + self.sideone + self.sidetwo
