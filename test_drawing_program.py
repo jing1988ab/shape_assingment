@@ -22,7 +22,7 @@ class DrawingProgramTest(unittest.TestCase):
 		circle = ShapeFactory.create_circle(5)
 		try:
 			add_shape_dp.add_shape(circle)
-			print(add_shape_dp.collection_of_shapes[0])
+			print(add_shape_dp.get_shape(0))
 		except RuntimeError as runtimeerror:
 			print("failed to add shape")
 
@@ -33,12 +33,12 @@ class DrawingProgramTest(unittest.TestCase):
 	"""
 	def test_remove_shape(self):
 		remove_shape = DrawingProgram()
-		circle = ShapeFactory.create_circle(5)
-		try:
-			remove_shape.add_shape(circle)
-			remove_shape.remove_shape(circle)
-		except RuntimeError as runtimeerror:
-			print("failed to remove shape")
+		shape_to_remove = ShapeFactory.create_circle(5)
+		remove_shape.add_shape(shape_to_remove)
+		remove_shape.add_shape(ShapeFactory.create_circle(5))
+		remove_shape.add_shape(ShapeFactory.create_circle(6))
+		remove_shape.add_shape(ShapeFactory.create_rectangle(3, 6))
+		self.assertEqual(remove_shape.remove_shape(shape_to_remove), 2)
 
 	"""
 	it should print the shape
@@ -66,10 +66,10 @@ class DrawingProgramTest(unittest.TestCase):
 		for shape in reversed(ORDERED_LIST):
 			sort_shapes_dp.add_shape(shape)
 		sort_shapes_dp.sort_shapes()
-		self.assertEqual(sort_shapes_dp.collection_of_shapes[0].__str__(), "Rectangle, area:12.0, perimeter:14.0")
-		self.assertEqual(sort_shapes_dp.collection_of_shapes[1].__str__(), "Square, area:16.0, perimeter:16.0")
-		self.assertEqual(sort_shapes_dp.collection_of_shapes[2].__str__(), "Triangle, area:6.928203230275509, perimeter:12.0")
-		self.assertEqual(sort_shapes_dp.collection_of_shapes[3].__str__(), "Triangle, area:10.825317547305483, perimeter:15.0")
+		self.assertEqual(sort_shapes_dp.get_shape(0).__str__(), "Rectangle, area:12.0, perimeter:14.0")
+		self.assertEqual(sort_shapes_dp.get_shape(1).__str__(), "Square, area:16.0, perimeter:16.0")
+		self.assertEqual(sort_shapes_dp.get_shape(2).__str__(), "Triangle, area:6.928203230275509, perimeter:12.0")
+		self.assertEqual(sort_shapes_dp.get_shape(3).__str__(), "Triangle, area:10.825317547305483, perimeter:15.0")
 
 	"""
 	it should get a specified shape from the list of shapes by index
@@ -88,7 +88,7 @@ class DrawingProgramTest(unittest.TestCase):
 		set_shape_dp.add_shape(ShapeFactory.create_rectangle(3, 4))
 		set_shape_dp.add_shape(ShapeFactory.create_rectangle(5, 6))
 		set_shape_dp.set_shape(1, ShapeFactory.create_rectangle(6, 7))
-		self.assertEqual(set_shape_dp.collection_of_shapes[1].__str__(), "Rectangle, area:42.0, perimeter:26.0")
+		self.assertEqual(set_shape_dp.get_shape(1).__str__(), "Rectangle, area:42.0, perimeter:26.0")
 
 if __name__ == '__main__':
     unittest.main()

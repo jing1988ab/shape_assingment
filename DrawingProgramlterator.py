@@ -6,16 +6,16 @@ class DrawingProgramIterator:
     iterate across the collection of shapes in DrawingProgram using a for loop
     """
     def __init__(self, collection_of_shapes):
-        self.list = collection_of_shapes
-        self.index = 0
+        self.__list = collection_of_shapes
+        self.__index = 0
 
     def __next__(self):
         """
         return the next value of the shape list or raise a StopIteration.
         :return: shape
         """
-        if self.index == len(self.list):
+        if self.__index == len(self.__list):
             raise StopIteration
-        shape_in_list = self.list[self.index]
-        self.index += 1
+        shape_in_list = self.__list[self.__index]
+        self.__index += 1
         return shape_in_list

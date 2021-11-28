@@ -9,7 +9,7 @@ class DrawingProgram:
     """
 
     def __init__(self, shapes=None):
-        self.collection_of_shapes = []
+        self.__collection_of_shapes = []
         if shapes:
             for shape in shapes:
                 self.add_shape(shape)
@@ -22,7 +22,7 @@ class DrawingProgram:
         :exception: TypeError is raised if the parameter passed is not a shape object.
         """
         if isinstance(shape, Shape):
-            self.collection_of_shapes.append(shape)
+            self.__collection_of_shapes.append(shape)
         else:
             raise TypeError("Invalid Data type. Input needs to be an instance of a subclass of Shape class.")
 
@@ -33,9 +33,10 @@ class DrawingProgram:
         :return: The number of elements removed.
         """
         count = 0
-        while shape in self.collection_of_shapes:
+        while shape in self.__collection_of_shapes:
             count += 1
-            self.collection_of_shapes.remove(shape)
+            self.__collection_of_shapes.remove(shape)
+        print("count: " + str(count))
         return count
 
     def print_shape(self, shape):
@@ -45,7 +46,7 @@ class DrawingProgram:
         :return: None
         """
         shape_string_list = []
-        for item in self.collection_of_shapes:
+        for item in self.__collection_of_shapes:
             if isinstance(item, shape.__class__):
                 shape_string_list.append(shape.__str__())
         print("\n".join(shape_string_list))
@@ -57,7 +58,7 @@ class DrawingProgram:
         then by area if names are same.
         :return: None
         """
-        self.collection_of_shapes = self.quick_sort(self.collection_of_shapes)
+        self.__collection_of_shapes = self.quick_sort(self.__collection_of_shapes)
 
     def __str__(self):
         """
@@ -66,7 +67,7 @@ class DrawingProgram:
         :return: the string representation of the shapes
         """
         shape_string_list = []
-        for shape in self.collection_of_shapes:
+        for shape in self.__collection_of_shapes:
             shape_string_list.append(shape.__str__())
         if len(shape_string_list) != 0:
             return "\n".join(shape_string_list)+"\n"
@@ -83,9 +84,9 @@ class DrawingProgram:
         """
         if not isinstance(index, int):
             raise TypeError("Invalid data type. Index must be an integer.")
-        if index >= len(self.collection_of_shapes):
+        if index >= len(self.__collection_of_shapes):
             raise ValueError("Invalid data. Index is out of range.")
-        return self.collection_of_shapes[index]
+        return self.__collection_of_shapes[index]
 
     def set_shape(self, index, shape):
         """
@@ -93,7 +94,7 @@ class DrawingProgram:
         :param shape: Shape
         :param index: index of the list to set the shape.
         """
-        self.collection_of_shapes[index] = shape
+        self.__collection_of_shapes[index] = shape
 
     def quick_sort(self, list_to_sort):
         """
@@ -142,4 +143,4 @@ class DrawingProgram:
         Creates an iterator to iterate across the collection of shapes.
         :return: Iterator
         """
-        return DrawingProgramIterator(self.collection_of_shapes)
+        return DrawingProgramIterator(self.__collection_of_shapes)

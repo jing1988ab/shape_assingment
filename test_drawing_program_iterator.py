@@ -12,7 +12,6 @@ class DrawingProgramIteratorTest(unittest.TestCase):
 	def test_init(self):
 		try:
 			iterator = DrawingProgramIterator(None)
-			self.assertEqual(iterator.index, 0)
 		except RuntimeError as runtimeerror:
 			print("failed to initialize iterator")
 
