@@ -8,14 +8,14 @@ class Shape(metaclass=abc.ABCMeta):
     """
 
     def __init__(self, name_of_shape):
-        self.name_of_shape = name_of_shape
+        self.__name_of_shape = name_of_shape
 
     def get_name_of_shape(self):
         """
         Get the name of the shape.
         :return: the name of the shape.
         """
-        return self.name_of_shape
+        return self.__name_of_shape
 
     def area(self):
         """
@@ -34,7 +34,7 @@ class Shape(metaclass=abc.ABCMeta):
         Return a string representation of the shape.
         :return: the string representation of the shape including the name, the area and the perimeter.
         """
-        return str(self.name_of_shape)+", area:"+str(self.area())+", perimeter:"+str(self.perimeter())
+        return str(self.__name_of_shape)+", area:"+str(self.area())+", perimeter:"+str(self.perimeter())
 
     def draw(self):
         """
