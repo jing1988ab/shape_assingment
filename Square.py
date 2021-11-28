@@ -7,18 +7,18 @@ class Square(Shape):
     """
     def __init__(self, length):
         super().__init__("Square")
-        self.length = length
+        self.__length = length
 
     def area(self):
         """
         Calculate the area of the square.
         :return: the area of the square.
         """
-        return self.length**2
+        return self.__length**2
 
     def perimeter(self):
         """
         Calculate the perimeter of the square.
         :return: the perimeter of the square.
         """
-        return self.length*4
+        return self.__length*4
