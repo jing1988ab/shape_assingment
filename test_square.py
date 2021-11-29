@@ -43,5 +43,9 @@ class SquareTest(unittest.TestCase):
         self.assertFalse(square2 == square1)
         self.assertTrue(square2 == square3)
 
+    def test_square(self):
+        square = ShapeFactory.create_square(5)
+        self.assertEqual(square.get_name_of_shape(), "Square")
+
 if __name__ == '__main__':
     unittest.main()

@@ -44,6 +44,10 @@ class CircleTest(unittest.TestCase):
         self.assertFalse(circle2 == circle1)
         self.assertTrue(circle2 == circle3)
 
+    def test_get_name_of_circle(self):
+        circle1 = ShapeFactory.create_circle(3)
+        self.assertEqual(circle1.get_name_of_shape(), "Circle")
+
 
 if __name__ == '__main__':
     unittest.main()

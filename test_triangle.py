@@ -44,6 +44,10 @@ class TriangleTest(unittest.TestCase):
         self.assertFalse(triangle2 == triangle1)
         self.assertTrue(triangle2 == triangle3)
 
+    def test_get_name(self):
+        triangle4 = ShapeFactory.create_triangle(3, 5, 7)
+        self.assertTrue(triangle4.get_name_of_shape(), "Triangle")
+
 
 if __name__ == '__main__':
     unittest.main()
