@@ -73,10 +73,8 @@ class DrawingProgramTest(unittest.TestCase):
 
 	def test_sort_shapes_empty_list(self):
 		sort_shapes_dp = DrawingProgram()
-		try:
-			sort_shapes_dp.sort_shapes()
-		except ValueError as valueerror:
-			print("shouldn't get here, failed to sort empty list")
+		sort_shapes_dp.sort_shapes()
+
 
 	def test_sort_shapes_one_in_list(self):
 		sort_shapes_dp = DrawingProgram()
