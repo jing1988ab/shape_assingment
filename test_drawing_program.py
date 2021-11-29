@@ -71,6 +71,20 @@ class DrawingProgramTest(unittest.TestCase):
 		self.assertEqual(sort_shapes_dp.get_shape(2).__str__(), "Triangle, area:6.928203230275509, perimeter:12.0")
 		self.assertEqual(sort_shapes_dp.get_shape(3).__str__(), "Triangle, area:10.825317547305483, perimeter:15.0")
 
+	def test_sort_shapes_empty_list(self):
+		sort_shapes_dp = DrawingProgram()
+		try:
+			sort_shapes_dp.sort_shapes()
+		except ValueError as valueerror:
+			print("shouldn't get here, failed to sort empty list")
+
+	def test_sort_shapes_one_in_list(self):
+		sort_shapes_dp = DrawingProgram()
+		myShape = ShapeFactory.create_rectangle(3, 4)
+		sort_shapes_dp.add_shape(myShape)
+		sort_shapes_dp.sort_shapes()
+		self.assertEqual(sort_shapes_dp.get_shape(0), myShape)
+
 	"""
 	it should get a specified shape from the list of shapes by index
 	"""
