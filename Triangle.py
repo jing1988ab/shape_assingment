@@ -9,9 +9,9 @@ class Triangle(Shape):
     """
     def __init__(self,sideone, sidetwo, sidethree):
         super().__init__("Triangle")
-        self.sideone = sideone
-        self.sidetwo = sidetwo
-        self.sidethree = sidethree
+        self.__sideone = sideone
+        self.__sidetwo = sidetwo
+        self.__sidethree = sidethree
 
     def area(self):
         """
@@ -19,7 +19,7 @@ class Triangle(Shape):
         :return: the area of the triangle.
         """
         p = self.perimeter()*0.5
-        x = p*(p-self.sideone)*(p-self.sidetwo)*(p-self.sidethree)
+        x = p*(p-self.__sideone)*(p-self.__sidetwo)*(p-self.__sidethree)
         if x <= 0:
             print("not a triangle!")
         area = math.sqrt(x)
@@ -30,4 +30,4 @@ class Triangle(Shape):
         Calculate the perimeter of the triangle.
         :return: the perimeter of the triangle.
         """
-        return self.sideone + self.sidetwo + self.sidethree
+        return self.__sideone + self.__sidetwo + self.__sidethree
