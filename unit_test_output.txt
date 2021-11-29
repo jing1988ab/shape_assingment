@@ -1,10 +1,14 @@
-michaelweinberg@Michaels-MacBook-Pro shape_assingment % python -m unittest
-.....Circle, area:78.53981633974483, perimeter:31.41592653589793
+michaelweinberg@Michaels-MacBook-Pro shape_assingment % python -m unittest          
+......Circle, area:78.53981633974483, perimeter:31.41592653589793
 ...Square, area:49.0, perimeter:28.0
 Square, area:49.0, perimeter:28.0
-....................
+.count: 2
+.............................
 ----------------------------------------------------------------------
-Ran 28 tests in 0.002s
+Ran 39 tests in 0.002s
 
 OK
-michaelweinberg@Michaels-MacBook-Pro shape_assingment %
+michaelweinberg@Michaels-MacBook-Pro shape_assingment % 
+
+
+

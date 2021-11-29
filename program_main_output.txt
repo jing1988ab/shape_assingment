@@ -1,7 +1,7 @@
 michaelweinberg@Michaels-MacBook-Pro shape_assingment % python drawingprogrammain.py
 Print empty DrawingProgram:
 
-
+ 
 Print DrawingProgram after add shapes:
 
 Triangle, area:1.7320508075688772, perimeter:6.0
@@ -129,5 +129,5 @@ Triangle, area:6.928203230275509, perimeter:12.0
 Triangle, area:10.825317547305483, perimeter:15.0
 Triangle, area:10.825317547305483, perimeter:15.0
 
-michaelweinberg@Michaels-MacBook-Pro shape_assingment %
+michaelweinberg@Michaels-MacBook-Pro shape_assingment % 
 
